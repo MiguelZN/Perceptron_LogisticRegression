@@ -185,7 +185,8 @@ def sigmoid(x):
     return 1/(1+math.exp(-x))
 
 #alpha:float - represents the learning rate of the logistic regression model
-def LogisticRegression(triplets, alpha:float=0.1, trainingiterations=100)->list:
+#This uses the binomial Bernoulli logistic regression (Not the logistic regression covered by berkeley)
+def LogisticRegression(triplets, alpha:float=0.1, trainingiterations=5)->list:
     probabilityvalues = []
     weights = [0]*(len(triplets[0])-1) #Initializes weights to be a vector of 0 sized by n inputs
 
